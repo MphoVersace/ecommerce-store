@@ -1,19 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AddAddress from "./Components/address";
-import ShoppingCart from "./Components/Bag";
-import PaymentMethod from "./Components/payment";
-import PurchaseCheckout from "./Components/CheckOut";
+import React from 'react';
+import PaymentForm from './components/payment';
+
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/Bag" element={<ShoppingCart />} />
-        <Route path="/Checkout" element={<PurchaseCheckout />} />
-        <Route path="/AddPayment" element={<PaymentMethod />} />
-        <Route path="/AddAdress" element={<AddAddress />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <PaymentForm />
+    </div>
   );
 }
 
