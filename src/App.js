@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as AppRouter, Routes as AppRoutes, Route as AppRoute } from "react-router-dom";
+import AddAddress from "./Components/address";
+import ShoppingCart from "./Components/Bag";
+import PaymentMethod from "./Components/payment";
+import PurchaseCheckout from "./Components/CheckOut";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppRouter>
+      <AppRoutes>
+        <AppRoute path="/Bag" element={<ShoppingCart />} />
+        <AppRoute path="/Checkout" element={<PurchaseCheckout />} />
+        <AppRoute path="/AddPayment" element={<PaymentMethod />} />
+        <AppRoute path="/AddAdress" element={<AddAddress />} />
+      </AppRoutes>
+    </AppRouter>
   );
 }
 
