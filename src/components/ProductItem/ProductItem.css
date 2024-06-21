@@ -22,7 +22,7 @@
   padding: 7px;
   box-sizing: border-box;
   width: 75%;
-  height: 50%;
+  height: 10%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -33,14 +33,14 @@
 
 .product-item__image {
   max-width: 100%;
-  max-height: 80%;
+  max-height: 60%;
   width: auto; 
   height: auto; 
   border-radius: 8px 8px 0 0;
   object-fit: contain;
   position: absolute;
-  top: 20px;
-  left: 0px;
+  top: 40px;
+  left: 40px;
   right: 0px;
 
 
