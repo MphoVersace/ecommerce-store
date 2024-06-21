@@ -9,7 +9,7 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail">
-      <button onClick={() => navigate('/')}>Back to Home</button>
+      <button onClick={() => navigate('/')}>Back</button>
       <div className="product-detail__image-container">
         <img src={product.image} alt={product.title} className="product-detail__image" />
       </div>
@@ -17,6 +17,7 @@ const ProductDetail = () => {
         <h2>{product.title}</h2>
         <p>{product.tags}</p>
         <p>{product.price}</p>
+        <p>{product.shortDescription}</p>
         <p>{product.productDescription}</p>
       </div>
     </div>
