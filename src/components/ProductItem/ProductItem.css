@@ -18,11 +18,10 @@
 
 .product-item__image-container {
   background-color: white;
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 7px;
   box-sizing: border-box;
-  width: 75%;
-  height: 10%;
+  width: 70%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -33,16 +32,14 @@
 
 .product-item__image {
   max-width: 100%;
-  max-height: 60%;
+  max-height: 90%;
   width: auto; 
   height: auto; 
   border-radius: 8px 8px 0 0;
   object-fit: contain;
   position: absolute;
-  top: 40px;
-  left: 40px;
-  right: 0px;
-
+  top: 5px;
+  left: 5px;
 
 }
 
