@@ -11,7 +11,7 @@ const product = [
   {
     title: 'Sony ZX330BT',
     tags: 'Light Grey',
-    price: '$ 39.99',
+    price: '$ 569.99',
     image: images.headphones,
   },
   {

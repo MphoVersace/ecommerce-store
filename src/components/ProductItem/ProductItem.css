@@ -3,21 +3,24 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .product-item {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  flex: 1 0 calc(23% - 10px); 
+  flex: 1 0 calc(23% - 10px);
   box-sizing: border-box;
   max-width: calc(23% - 10px);
+  text-align: center;
 }
 
-.product-item__image img {
-  position: relative;
+.product-item__image-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.product-item__image {
   width: 100%;
   height: auto;
   border-radius: 8px 8px 0 0;
