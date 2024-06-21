@@ -19,8 +19,8 @@
   padding: 7px;
   box-sizing: border-box;
   width: 100%;
-  padding-top: 100%; /* This makes the container square */
-  position: relative; /* This allows absolute positioning of the image */
+  padding-top: 100%; 
+  position: relative; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,13 +28,13 @@
 }
 
 .product-item__image {
-  position: absolute; /* This makes the image fill the container */
-  top: 7px; /* Adjust these values if necessary */
+  position: absolute; 
+  top: 7px; 
   left: 7px;
   right: 7px;
   bottom: 7px;
-  max-width: calc(100% - 14px); /* Subtract the padding from the max width */
-  max-height: calc(100% - 14px); /* Subtract the padding from the max height */
+  max-width: calc(100% - 14px); 
+  max-height: calc(100% - 14px);
   border-radius: 8px 8px 0 0;
   object-fit: cover;
 }
