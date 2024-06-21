@@ -3,11 +3,11 @@ import { Home } from './container';
 import './App.css';
 import Bag from './Bag';
 
-const App = () => (
-  <div>
-    <Home />
-  </div>
-)
+function App() {
+  return (
+    <Bag />
+  );
+}
 
 export default App;
 
