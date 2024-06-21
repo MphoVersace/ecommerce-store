@@ -7,6 +7,7 @@ const Home = () => (
     {data.product.map((product, index) => (
       <ProductItem
         key={product.title + index}
+        id={index}
         title={product.title}
         price={product.price}
         tags={product.tags}
