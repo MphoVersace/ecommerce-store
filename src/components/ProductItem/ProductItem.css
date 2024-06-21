@@ -16,14 +16,27 @@
 .product-item__image-container {
   background-color: white;
   border-radius: 8px;
-  padding: 16px;
+  padding: 7px;
   box-sizing: border-box;
+  width: 100%;
+  padding-top: 100%; /* This makes the container square */
+  position: relative; /* This allows absolute positioning of the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
 }
 
 .product-item__image {
-  width: 100%;
-  height: auto;
+  position: absolute; /* This makes the image fill the container */
+  top: 7px; /* Adjust these values if necessary */
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
+  max-width: calc(100% - 14px); /* Subtract the padding from the max width */
+  max-height: calc(100% - 14px); /* Subtract the padding from the max height */
   border-radius: 8px 8px 0 0;
+  object-fit: cover;
 }
 
 .product-item__details {
