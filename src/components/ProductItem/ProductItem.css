@@ -67,3 +67,8 @@
   font-weight: bold;
   margin: 8px 0;
 }
+
+.product-item:nth-child(2) .product-item__image {
+  left: 15px;
+  top: -10px;
+}
