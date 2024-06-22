@@ -1,7 +1,7 @@
 // Code for product details
 import images from './images';
 
-const product = [
+const products = [
   {
     title: 'Apple Watch',
     tags: 'Series 5 SE',
@@ -50,7 +50,7 @@ const product = [
     price: '$ 619.99',
     image: images.iphone11red,
   },
-  
+
 ];
 
-export default { product };
+export default { products };

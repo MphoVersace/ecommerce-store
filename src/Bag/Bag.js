@@ -1,8 +1,13 @@
 import React from "react";
 import { data } from "../constants";
 
-const Bag = ({ cartItems }) => {
-    const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+const myBag = [];
+let setMyBag = () => { };
+
+export default function Bag() {
+    const [cartItems, setCartItems] = React.useState(myBag);
+    setMyBag = setCartItems;
+    const total = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
     return (
         <div className="cart">
             <h2>Bag</h2>
@@ -10,18 +15,9 @@ const Bag = ({ cartItems }) => {
                 <p>Your cart is empty.</p>
             ) : (
                 <ul>
-                    {cartItems.map((item) => (
-                        <li key={item.id}>
-                            {item.image}
-                        </li>,
-                        <li key={item.id}>
-                            {item.image}
-                        </li>,
-                        <li key={item.id}>
-                            {item.image}
-                        </li>,
-                        <li key={item.id}>
-                            {item.image}
+                    {cartItems.map((product) => (
+                        <li key={product.id}>
+                            <img src={product.image} style={{ maxWidth: '60px' }} alt={product.title} />
                         </li>
                     ))}
                 </ul>
@@ -31,3 +27,15 @@ const Bag = ({ cartItems }) => {
     );
 };
 
+export function addToBag(productId) {
+    const product = data.products[productId];
+    const index = myBag.findIndex((item) => item.id === productId);
+    if (index >= 0) {
+        myBag[index].quantity++;
+    } else {
+        const newProduct = { ...product, quantity: 1, id: productId };
+        newProduct.price = parseFloat(newProduct.price.replace('$', ''));
+        myBag.push(newProduct);
+    }
+    setMyBag([...myBag]);
+}
