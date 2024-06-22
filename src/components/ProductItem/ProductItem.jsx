@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProductItem.css';
 import { addToSideBag } from '../../Bag/SideBag';
-import { addToBag } from '../../Bag/Bag';
+// import { addToBag } from '../../Bag/Bag';
 
 const addToCart = (productId) => {
   addToSideBag(productId);
