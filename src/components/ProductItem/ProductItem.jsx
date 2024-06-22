@@ -1,12 +1,12 @@
 import React from 'react';
 import './ProductItem.css';
 import { addToSideBag } from '../../Bag/SideBag';
-import { addToBag } from '../../Bag/Bag';
+// import { addToBag } from '../../Bag/Bag';
 
-const addToCartButton = () => {
-  addToBag();
-  addToSideBag();
-}
+// const addToCartButton = () => {
+//   addToBag();
+//   addToSideBag();
+// }
 
 const ProductItem = ({ productId, title, price, tags, image }) => (
   <div className="product-item">

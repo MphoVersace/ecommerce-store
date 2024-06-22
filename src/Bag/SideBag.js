@@ -1,6 +1,5 @@
 import React from "react";
 import { data } from "../constants";
-import { Link } from "react-router-dom";
 import './sidebag.css';
 
 export let myBag = [];
@@ -10,7 +9,6 @@ export default function SideBag() {
     const [cartItems, setCartItems] = React.useState(myBag);
     myBag = cartItems;
     setMyBag = setCartItems;
-    const total = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
     return (
         <div className="cart" style={{ backgroundColor: '#EAEAEA' }}>
             <h1 className="bag-title">Bag</h1>
