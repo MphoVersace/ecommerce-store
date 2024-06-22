@@ -1,4 +1,4 @@
-/* Sidebar */
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -72,7 +72,7 @@
   border-radius: 10px;
 }
 
-/* Bottom navigation link */
+
 .sidebar__bottom-link {
   display: flex;
   justify-content: center;
