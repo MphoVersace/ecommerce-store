@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/MenuSidebar';
@@ -28,3 +29,5 @@ const MenuIcon = () => <div>Menu Icon Page</div>;
 const NavLink = () => <div>Nav Link Page</div>;
 
 export default App;
+=======
+>>>>>>> 128afec2f7879c8a22b0dbbae3dfc5896b8c1b24
