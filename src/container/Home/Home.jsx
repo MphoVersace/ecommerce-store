@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { data } from "../../constants";
 import { ProductItem } from "../../components";
 import Sidebar from "../../components/MenuSidebar";
+import Bag from '../../Bag/Bag';
 
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -31,18 +32,21 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="product-container">
-        {filteredProducts.map((product, index) => (
-          <ProductItem
-            key={product.title + index}
-            id={index}
-            title={product.title}
-            price={product.price}
-            tags={product.tags}
-            image={product.image}
-          />
-        ))}
-      </div>
+      <div style={{ display: 'flex' }}>
+    <div className="product-container">
+          {filteredProductss.map((product, index) => (
+            <ProductItem
+              key={product.title + index}
+              productId={index}
+              title={product.title}
+              price={product.price}
+              tags={product.tags}
+              image={product.image}
+            />
+          ))}
+        </div>
+    <Bag />
+  </div>
     </>
   );
 };

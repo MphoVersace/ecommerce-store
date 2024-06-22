@@ -1,7 +1,7 @@
 // Code for product details
 import images from './images';
 
-const product = [
+const products = [
   {
     title: 'Apple Watch',
     tags: 'Series 5 SE',
@@ -69,4 +69,4 @@ const product = [
 
 ];
 
-export default { product };
+export default { products };
