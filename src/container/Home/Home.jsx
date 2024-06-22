@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { data } from "../../constants";
 import { ProductItem } from "../../components";
 import Sidebar from "../../components/MenuSidebar";
+import SideBag from '../../Bag/SideBag';
 import Bag from '../../Bag/Bag';
+import './Home.css'
 
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -33,7 +35,7 @@ const Home = () => {
         </div>
       </div>
       <div style={{ display: 'flex' }}>
-    <div className="product-container">
+    <div className="product-container" style={{flex: 1}}>
           {filteredProductss.map((product, index) => (
             <ProductItem
               key={product.title + index}
@@ -45,7 +47,10 @@ const Home = () => {
             />
           ))}
         </div>
-    <Bag />
+    <hr className='divider'/>
+    <div className="sidebag-container" >
+    <SideBag style={{ width: '200px', marginLeft: '20px' , position: 'fixed', right: 0, top:0}}/>
+    </div>
   </div>
     </>
   );

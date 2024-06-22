@@ -5,12 +5,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ProductDetail } from './container';
 import { Home } from './container';
 import './App.css';
+import BagDetails from './Bag/BagDetails';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        {/* <Sidebar /> */}
+      <div className="App" style={{ backgroundColor: '#EAEAEA' }}>
+        {/* {/* <Sidebar /> */} */
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -18,6 +19,7 @@ function App() {
             <Route path="/menu-icon" element={<MenuIcon />} />
             <Route path="/nav-link" element={<NavLink />} />
             <Route path="/dashboard" element={<ProductDetail />} />
+            <Route path="/bag-details" element={<BagDetails />} />
           </Routes>
         </div>
       </div>

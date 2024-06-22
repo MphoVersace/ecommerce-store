@@ -1,0 +1,8 @@
+.divider {
+    width: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none; /* Optional: Remove default border styles */
+   margin-right: 1.5rem;
+    background-color:grey;
+  }
