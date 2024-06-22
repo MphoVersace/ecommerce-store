@@ -1,6 +1,5 @@
 import React from "react";
 import { data } from "../constants";
-import { Link } from "react-router-dom";
 
 export let myBag = [];
 let setMyBag = () => { };
