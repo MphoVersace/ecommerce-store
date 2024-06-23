@@ -1,0 +1,39 @@
+.bag-container {
+    display: flex;
+    text-align: right;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 350px;
+    background-color: #EAEAEA;
+    
+  }
+  
+  .cart-item {
+    width: calc(30% - 10px);
+    margin: 0.5px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10%;
+    margin-bottom: 2rem;
+    
+  }
+
+  .cart{
+    margin-right: 1.5rem;
+  }
+
+  .bag-title{
+    text-align: center;
+  }
+
+  .bag-items-container{
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    min-height: 100vh;
+    margin: 0; /* Reset default margin on body */
+  overflow: auto;
+ }
