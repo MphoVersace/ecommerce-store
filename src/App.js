@@ -1,21 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-<<<<<<< HEAD
-import { Home } from './container';
-import { ProductDetail } from './container';
-import './App.css';
 
-const App = () => (
-  <Router>
-  <div>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/product/:productId" element={<ProductDetail />} />
-    </Routes>
-  </div>
-</Router>
-);
-=======
+
+
 import Sidebar from './components/MenuSidebar';
 import './App.css'; // Assuming App.css is in the src directory
 import Home from './container/Home/Home';
@@ -39,7 +26,7 @@ function App() {
     </Router>
   );
 }
->>>>>>> e3170fd76f5fe112a473c6546e3ba60665e3f313
+
 
 // const Home = () => <div>Home Page</div>;
 const Logo = () => <div>Logo Page</div>;
