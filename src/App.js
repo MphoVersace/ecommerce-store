@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/MenuSidebar';
 import './App.css'; // Assuming App.css is in the src directory
 import Home from './container/Home/Home';
-import Checkout from './CheckoutPage/Checkout';
+import BagDetails from './Bag/BagDetails';
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App" style={{ backgroundColor: '#EAEAEA' }}>
         <Sidebar />
         <div className="content">
           <Routes>
@@ -16,7 +16,7 @@ function App() {
             <Route path="/logo" element={<Logo />} />
             <Route path="/menu-icon" element={<MenuIcon />} />
             <Route path="/nav-link" element={<NavLink />} />
-            <Route path="/Checkout" element={<Checkout/>}/>
+            <Route path="/bag-details" element={<BagDetails />} />
           </Routes>
         </div>
       </div>
