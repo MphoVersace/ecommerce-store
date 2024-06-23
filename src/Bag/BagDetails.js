@@ -10,18 +10,18 @@ export default function BagDetails() {
     setMyBag = setCartItems;
     return (
         <div style={{ display: 'flex', justifyContent: 'space-between' }} >
-            <div className='bag-items-container'>
+            <div className='bag-items-container' style={{ marginLeft: '10rem', width: '100%' }}>
                 <div>
-                    <h2>Check Your Bag Items</h2>
-                    <div>
-                        <ul className="bag-items-list">
+                    <h1>Check Your Bag Items</h1>
+                    <div style={{ width: '100%' }}>
+                        <ul className="bag-items-list" >
                             {cartItems.map((product) => (
                                 <li key={product.id} className="bag-item">
                                     <div className="product-image-container">
-                                        <img src={product.image} alt={product.title} style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
+                                        <img src={product.image} alt={product.title} style={{ width: '100%', height: '80%', objectFit: 'cover' }} />
                                     </div>
                                     <div className="product-details">
-                                        <h3>{product.title}</h3>
+                                        <h1>{product.title}</h1>
                                         {product.color && <p>Color: {product.color}</p>}
                                         {product.description && <p>{product.description}</p>}
                                         {product.rating && (
