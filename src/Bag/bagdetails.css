@@ -1,3 +1,7 @@
+.body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .bag-container {
     display: flex;
     text-align: right;
@@ -8,6 +12,7 @@
     padding: 0;
     width: 350px;
     background-color: #EAEAEA;
+    font-family: 'Roboto', sans-serif;
     
   }
   
@@ -34,8 +39,9 @@
     justify-content: center;
     align-items: right;
     min-height: 100vh;
-    margin: 0; /* Reset default margin on body */
+    /* margin: 0;  */
     overflow: auto;
+    margin-right: '5px'
  }
 
  .bag-items-list{
