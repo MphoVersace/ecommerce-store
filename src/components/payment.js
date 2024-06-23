@@ -1,6 +1,6 @@
 import cardIcon from "../assets/card-icon.svg";
 import lockIcon from "../assets/cardlock.svg";
-import "../App.css";
+import "../style1.css";
 
 
 function PaymentForm() {

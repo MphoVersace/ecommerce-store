@@ -1,68 +1,76 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import lockIcon from "../assets/cardlock.svg";
+import lock from "../assets/cardlock.svg";
+import { Link } from "react-router-dom";
+import "../style2.css";
 
-function AddressForm() {
-  return (
-    <div className="address-container">
-      <div className="form-container">
-        <form>
-          <div className="form-group">
-            <div className="form-field">
-              <label htmlFor="shippingName">Shipping Name</label>
-              <input type="text" id="shippingName" placeholder="John Maker" />
-            </div>
+function AddAdress() {
+    return (
+      <>
+        <div className="payment-container">
+          <div className="new-card-form">
+            <form>
+              <div className="form-group">
+                <div className="card">
+                  <label htmlFor="name">Shipping name </label>
+                  <input type="text" id="name" placeholder="John Maker" />
+                </div>
+              </div>
+              <div className="form-group">
+                <div className="card">
+                  <label htmlFor="name">Street name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="123 Plae Grond Street"
+                  />
+                </div>
+              </div>
+  
+              <div className="form-group">
+                <div className="card">
+                  <label htmlFor="name">City</label>
+                  <input type="text" id="name" placeholder="Vermont" />
+                </div>
+              </div>
+  
+              <div className="form-group">
+                <div className="card">
+                  <label htmlFor="name">State/Province</label>
+                  <input type="text" id="name" placeholder="California" />
+                </div>
+              </div>
+  
+              <div className="form-group">
+                <div className="card">
+                  <label htmlFor="name">Country</label>
+                  <input type="text" id="name" placeholder="United States" />
+                </div>
+              </div>
+              <br></br>
+  
+              <div className="default-payment-checkbox">
+                <input type="checkbox" id="myCheckbox" name="myCheckbox" />
+                <label htmlFor="myCheckbox">
+                  Save this as your default payment method
+                </label>
+              </div>
+  
+              <div className="submit-button">
+                <Link to="/AddPayment">
+                  <button className="bttn5">Add Payment Method</button>
+                </Link>
+              </div>
+  
+              <div className="footer">
+                <p>back</p>
+                <p id="la">
+                  <img src={lock} alt=""></img>Secure Connection
+                </p>
+              </div>
+            </form>
           </div>
-
-          <div className="form-group">
-            <div className="form-field">
-              <label htmlFor="streetName">Street Name</label>
-              <input type="text" id="streetName" placeholder="123 Plae Grond Street" />
-            </div>
-          </div>
-
-          <div className="form-group">
-            <div className="form-field">
-              <label htmlFor="city">City</label>
-              <input type="text" id="city" placeholder="Vermont" />
-            </div>
-          </div>
-
-          <div className="form-group">
-            <div className="form-field">
-              <label htmlFor="state">State/Province</label>
-              <input type="text" id="state" placeholder="California" />
-            </div>
-          </div>
-
-          <div className="form-group">
-            <div className="form-field">
-              <label htmlFor="country">Country</label>
-              <input type="text" id="country" placeholder="United States" />
-            </div>
-          </div>
-
-          <div className="form-group checkbox">
-            <input type="checkbox" id="defaultAddress" name="defaultAddress" />
-            <label htmlFor="defaultAddress">Save this as your default shipping address</label>
-          </div>
-
-          <div className="form-group submit-button">
-            <Link to="/AddPayment">
-              <button type="button" className="btn">Add Payment Method</button>
-            </Link>
-          </div>
-
-          <div className="form-footer">
-            <p className="back-link">Back</p>
-            <p className="secure-connection">
-              <img src={lockIcon} alt="Secure Connection" />Secure Connection
-            </p>
-          </div>
-        </form>
-      </div>
-    </div>
-  );
-}
-
-export default AddressForm;
+        </div>
+      </>
+    );
+  }
+  
+  export default AddAdress;

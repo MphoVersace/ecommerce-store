@@ -1,12 +1,15 @@
 import React from 'react';
-import PaymentForm from './components/payment';
+import { BrowserRouter as Router } from 'react-router-dom';
 
+import Address from './components/address';
 
 function App() {
   return (
-    <div className="App">
-      <PaymentForm />
-    </div>
+    <Router>
+      <div className="App">
+        <Address />
+      </div>
+    </Router>
   );
 }
 
