@@ -45,12 +45,7 @@ const Checkout = () => {
         <div className="container">
             <h2>Checkout</h2>
 
-              {/* Back Button */}
-              <div className="back-button">
-                <Link to="/bag-details">
-                    <button className="back-button">Back</button>
-                </Link>
-            </div>
+            
 
             {/* Shipping Address Section */}
             <div className="section">
@@ -120,9 +115,18 @@ const Checkout = () => {
                 calculateTotal={calculateTotal}
             />
 
+  {/* Back Button */}
+  <div className="back-btn">
+      <Link to="/bag-details">
+          <button className="btn4">Back</button>
+      </Link>
+  </div>
+      
             
         </div>
+         
     );
+   
 };
 
 export default Checkout;
