@@ -3,7 +3,7 @@ import React from 'react';
 const ShippingAddress = ({ shippingDetails, isEditing, handleInputChange, saveDetails, toggleEdit }) => {
     return (
         <div className="section" id="shipping-address">
-            <h3>Shipping Address</h3>
+            
             {!isEditing ? (
                 <div>
                     <p>{shippingDetails.fullName}</p>

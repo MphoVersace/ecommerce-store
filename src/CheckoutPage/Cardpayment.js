@@ -5,7 +5,7 @@ import ImageGift from '../assets/Name=gift.png';
 const PaymentMethod = ({ paymentDetails, isEditingPayment, handleInputChange, savePaymentDetails, togglePaymentEdit }) => {
     return (
         <div className="section" id="payment-method">
-            <h3>Payment Method</h3>
+           
             {!isEditingPayment ? (
                 <div>
                     <p><img src={ImageCard} alt="Mastercard    " />&nbsp;Mastercard Number: {paymentDetails.mastercardNumber}</p>
