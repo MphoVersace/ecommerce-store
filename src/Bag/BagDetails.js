@@ -2,7 +2,7 @@ import React from "react";
 import { myBag } from "./Bag";
 import Bag from "./Bag";
 import './bagdetails.css'
-import { data } from "../constants";
+// import { data } from "../constants";
 import { addToBag } from "./Bag";
 import { decreaseQuantity } from "./Bag";
 
@@ -19,6 +19,7 @@ const quantityUpdateAdd = (productId) => {
 
 export default function BagDetails() {
     const [cartItems, setCartItems] = React.useState(myBag);
+    myBag.map((item) => ({ ...item, subtotal: item.quantity * item.price }))
     setMyBag = setCartItems;
     return (
         <div style={{ display: 'flex', justifyContent: 'space-between' }} >
@@ -70,7 +71,9 @@ function decreaseQuant(productId) {
     setMyBag((prevBag) => {
         const updatedBag = prevBag.map((item) => {
             if (item.id === productId && item.quantity > 0) {
-                return { ...item, quantity: Math.max(item.quantity - 1, 0) };
+                const newQuantity = Math.max(item.quantity - 1, 0);
+                const newSubtotal = newQuantity * item.price;
+                return { ...item, quantity: newQuantity, subtotal: newSubtotal };
             }
             return item;
         });
@@ -82,7 +85,8 @@ function increaseQuant(productId) {
     setMyBag((prevBag) => {
         const updatedBag = prevBag.map((item) => {
             if (item.id === productId) {
-                return { ...item, quantity: Math.max(item.quantity + 1, 0) };
+                const newQuantity = Math.max(item.quantity + 1, 0);
+                return { ...item, quantity: newQuantity, subtotal: newQuantity * item.price };
             }
             return item;
         });
