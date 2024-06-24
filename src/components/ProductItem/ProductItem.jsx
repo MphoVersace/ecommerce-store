@@ -12,7 +12,7 @@ const addToCart = (productId) => {
 const ProductItem = ({ id, title, price, tags, image }) => (
   <div className="product-item">
     <div className="product-item__image-container">
-      <Link to={`/product/${id}`}>
+      <Link to={`/product/${productId}`}>
         <img src={image} alt={title} className="product-item__image" />
       </Link>
     </div>
