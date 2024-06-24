@@ -9,7 +9,7 @@ import './Home.css'
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredProducts = data.product.filter(
+  const filteredProducts = data.products.filter(
     (product) =>
       product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       product.price.toString().includes(searchQuery)
@@ -36,7 +36,7 @@ const Home = () => {
       </div>
       <div style={{ display: 'flex' }}>
     <div className="product-container" style={{flex: 1}}>
-          {filteredProductss.map((product, index) => (
+          {filteredProducts.map((product, index) => (
             <ProductItem
               key={product.title + index}
               productId={index}

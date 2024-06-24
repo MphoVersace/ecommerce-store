@@ -2,9 +2,10 @@ import React from "react";
 import { myBag } from "./Bag";
 import Bag from "./Bag";
 import './bagdetails.css'
-// import { data } from "../constants";
+import { data } from "../constants";
 import { addToBag } from "./Bag";
 import { decreaseQuantity } from "./Bag";
+import Sidebar from "../components/MenuSidebar";
 
 let setMyBag = () => { };
 const quantityUpdate = (productId) => {
@@ -22,7 +23,9 @@ export default function BagDetails() {
     myBag.map((item) => ({ ...item, subtotal: item.quantity * item.price }))
     setMyBag = setCartItems;
     return (
+        // <Sidebar /> >
         <div style={{ display: 'flex', justifyContent: 'space-between' }} >
+            <Sidebar />
             <div className='bag-items-container' style={{ marginLeft: '5rem', width: '100%' }}>
                 <div>
                     <h1>Check Your Bag Items</h1>

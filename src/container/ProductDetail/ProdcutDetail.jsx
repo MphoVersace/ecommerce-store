@@ -5,7 +5,7 @@ import { data } from '../../constants';
 const ProductDetail = () => {
   const { productId } = useParams();
   const navigate = useNavigate();
-  const product = data.product[productId];
+  const product = data.products[productId];
 
   return (
     <div className="product-detail">

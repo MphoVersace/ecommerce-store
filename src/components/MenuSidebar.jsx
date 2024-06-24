@@ -10,7 +10,6 @@ import bagIcon from "../assets/Bag.svg";
 import closeBagIcon from "../assets/CloseBag.svg"; 
 import navLinkIcon from "../assets/NavLink.svg";
 import closeNavLinkIcon from "../assets/CloseNavLink.svg";
-import BagDetails from "../Bag/BagDetails"; 
 
 const Sidebar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
@@ -37,7 +36,7 @@ const Sidebar = () => {
           </Link>
         </div>
         <div className="sidebar__bag-link">
-          <Link to="/bag-details">
+          <Link to="/bag">
             <img src={isMenuOpen ? closeBagIcon : bagIcon} alt="Bag Icon" /> 
           </Link>
         </div>
