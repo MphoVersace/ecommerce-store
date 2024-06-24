@@ -1,7 +1,7 @@
 import React from "react";
 import { myBag } from "./Bag";
 import Bag from "./Bag";
-import './bagdetails.css'
+import './bagdetails.css';
 
 let setMyBag = () => { };
 
@@ -46,6 +46,7 @@ export default function BagDetails() {
             <hr className='divider' />
             <div>
                 <Bag />
+                
             </div>
         </div>
 

@@ -45,6 +45,13 @@ const Checkout = () => {
         <div className="container">
             <h2>Checkout</h2>
 
+              {/* Back Button */}
+              <div className="back-button">
+                <Link to="/bag-details">
+                    <button className="back-button">Back</button>
+                </Link>
+            </div>
+
             {/* Shipping Address Section */}
             <div className="section">
                 <h3>Shipping Address</h3>
@@ -112,6 +119,8 @@ const Checkout = () => {
                 giftCardBalance={parseFloat(paymentDetails.giftCardBalance.replace('$', '')) || 0}
                 calculateTotal={calculateTotal}
             />
+
+            
         </div>
     );
 };

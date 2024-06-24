@@ -95,76 +95,145 @@
 
 
 
-
-
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  position: absolute;
-  border: 1px solid black;
-  margin: 25px 50px 75px 100px;
-  background-color: rgb(233, 237, 238);
-
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5%;
+  font-family: sans-serif;
 }
-
-
 
 .section {
-  margin-bottom: 20px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 0.7em;
+  width: 60%;
+  margin-bottom: 25px;
 }
 
-.form-group {
+.section h3 {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 10px;
+}
+
+.section-content {
+  width: 100%;
+}
+
+.section-actions {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.change-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.change-button:hover {
+  background-color: darkgray;
+}
+
+#review-your-bag .section-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.bag-item {
+  display: flex;
   margin-bottom: 15px;
 }
 
+.product-image-container {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.product-details {
+  flex: 1 1 auto;
+}
+
+.product-details h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.product-details p {
+  margin: 5px 0;
+  color: gray;
+}
+
+/* Order Summary */
 .order-summary {
-top: 15px;
-left: 900px;
-padding: 20px;
-border-radius: 12px ;
-position: absolute;
-border: 1px solid black;
-margin: 25px 50px ;
-background-color: rgb(224, 233, 236);
-border-style: ridge;
-height: 300px;
-width: 300px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 0.7em;
+  width: 60%;
+  margin-top: 25px;
+  position: relative;
+}
+.order-summary h3 {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 10px;
 }
 
-.order-summary h3, .payment-method h3 {
-  margin-top: 0;
+.order-summary p {
+  margin: 10px 0;
+  color: gray;
 }
 
-.order-summary p, .order-summary h4, .payment-method p {
+.order-summary .summary-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.order-summary .summary-item p {
   margin: 5px 0;
 }
 
-.order-summary button, .payment-method button {
-  margin-top: 15px;
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: #fff;
+.order-summary .total {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.back-btn {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.back-btn .btn4 {
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: black;
+  color: white;
   border: none;
   cursor: pointer;
 }
 
-.order-summary button:hover, .payment-method button:hover {
-  background-color: #0056b3;
+.back-btn .btn4:hover {
+  background-color: darkgray;
 }
-
-
-
-
-
-.section{
-  display: flex;
-  justify-content: center;
-  align-items: right;
-  min-height: 100vh;
-  margin: 0; /* Reset default margin on body */
-  overflow: auto;
-}
-
-
 
