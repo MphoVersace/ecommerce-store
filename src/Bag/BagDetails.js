@@ -4,8 +4,18 @@ import Bag from "./Bag";
 import './bagdetails.css'
 import { data } from "../constants";
 import { addToBag } from "./Bag";
+import { decreaseQuantity } from "./Bag";
 
 let setMyBag = () => { };
+const quantityUpdate = (productId) => {
+    decreaseQuantity(productId);
+    decreaseQuant(productId);
+};
+
+const quantityUpdateAdd = (productId) => {
+    addToBag(productId);
+    increaseQuant(productId);
+};
 
 export default function BagDetails() {
     const [cartItems, setCartItems] = React.useState(myBag);
@@ -36,9 +46,9 @@ export default function BagDetails() {
                                             {/* <p>Quantity: {product.quantity}</p> */}
                                             <p>Price: ${product.price.toFixed(2)}</p>
                                             <div className="quantity-controls" >
-                                                <button onClick={() => decreaseQuantity(product.id, cartItems)} style={{ color: 'red', fontSize: '1.5rem', border: 'none', backgroundColor: 'white', marginRight: '5px', }}>−</button>
+                                                <button onClick={() => quantityUpdate(product.id, cartItems)} style={{ color: 'red', fontSize: '1.5rem', border: 'none', backgroundColor: 'white', marginRight: '5px', }}>−</button>
                                                 <input type="number" value={product.quantity} readOnly style={{ width: '30px', height: '25px', border: 'none', fontSize: '1.3rem', marginLeft: '5px' }} />
-                                                <button onClick={() => addToBag(product.id)} style={{ color: 'green', fontSize: '1.5rem', border: 'none', backgroundColor: 'white' }}>+</button>
+                                                <button onClick={() => quantityUpdateAdd(product.id)} style={{ color: 'green', fontSize: '1.5rem', border: 'none', backgroundColor: 'white' }}>+</button>
                                             </div>
                                         </div>
                                     </div>
@@ -49,21 +59,33 @@ export default function BagDetails() {
                 </div>
             </div>
             <hr className='divider' />
-            <div>
+            <div style={{ width: '20rem' }}>
                 <Bag />
             </div>
         </div>
     )
 }
 
-function decreaseQuantity(productId) {
+function decreaseQuant(productId) {
     setMyBag((prevBag) => {
         const updatedBag = prevBag.map((item) => {
             if (item.id === productId && item.quantity > 0) {
-                return { ...item, quantity: item.quantity - 1 };
+                return { ...item, quantity: Math.max(item.quantity - 1, 0) };
             }
             return item;
         });
         return updatedBag.filter((item) => item.quantity > 0);
+    });
+}
+
+function increaseQuant(productId) {
+    setMyBag((prevBag) => {
+        const updatedBag = prevBag.map((item) => {
+            if (item.id === productId) {
+                return { ...item, quantity: Math.max(item.quantity + 1, 0) };
+            }
+            return item;
+        });
+        return updatedBag;
     });
 }

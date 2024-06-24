@@ -50,3 +50,15 @@ export function addToBag(productId) {
     }
     setMyBag([...myBag]);
 }
+
+export function decreaseQuantity(productId) {
+    setMyBag((prevBag) => {
+        const updatedBag = prevBag.map((item) => {
+            if (item.id === productId && item.quantity > 0) {
+                return { ...item, quantity: item.quantity - 1 };
+            }
+            return item;
+        });
+        return updatedBag.filter((item) => item.quantity > 0);
+    });
+}
