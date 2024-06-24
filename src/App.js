@@ -1,5 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+
+
 import Sidebar from './components/MenuSidebar';
 import './App.css'; // Assuming App.css is in the src directory
 import Home from './container/Home/Home';
@@ -28,9 +31,11 @@ function App() {
   );
 }
 
+
 // const Home = () => <div>Home Page</div>;
 const Logo = () => <div>Logo Page</div>;
 const MenuIcon = () => <div>Menu Icon Page</div>;
 const NavLink = () => <div>Nav Link Page</div>;
 
 export default App;
+
