@@ -7,6 +7,8 @@ let setMyBag = () => { };
 
 export default function BagDetails() {
     const [cartItems, setCartItems] = React.useState(myBag);
+
+    
     setMyBag = setCartItems;
     return (
         <div style={{ display: 'flex', justifyContent: 'space-between' }} >

@@ -4,8 +4,11 @@ import Sidebar from './components/MenuSidebar';
 import './App.css'; // Assuming App.css is in the src directory
 import Home from './container/Home/Home';
 import BagDetails from './Bag/BagDetails';
+import Checkout from './CheckoutPage/Checkout';
+
 
 function App() {
+  
   return (
     <Router>
       <div className="App" style={{ backgroundColor: '#EAEAEA' }}>
@@ -17,7 +20,8 @@ function App() {
             <Route path="/menu-icon" element={<MenuIcon />} />
             <Route path="/nav-link" element={<NavLink />} />
             <Route path="/bag-details" element={<BagDetails />} />
-          </Routes>
+            <Route path="/checkout" element={<Checkout/>}/>
+          </Routes> 
         </div>
       </div>
     </Router>
