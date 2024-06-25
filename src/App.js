@@ -5,9 +5,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ProductDetail } from './container';
 import { Home } from './container';
 import BagDetails from './Bag/BagDetails';
+import Checkout from './CheckoutPage/Checkout';
 import './App.css';
 
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>
@@ -17,6 +19,7 @@ function App() {
         <Route path="/nav-link" element={<NavLink />} />
         <Route path="/dashboard" element={<ProductDetail />} />
         <Route path="/bag" element={<BagDetails />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </BrowserRouter>
   );
