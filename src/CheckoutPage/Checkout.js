@@ -1,5 +1,5 @@
-import React,{useState} from 'react';
-import { useLocation,Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLocation, Link } from 'react-router-dom';
 import ImageCard from '../assets/Name=card.png';
 import ImageGift from '../assets/Name=gift.png';
 import ShippingAddress from './Shipping';
@@ -45,7 +45,7 @@ const Checkout = () => {
         <div className="container">
             <h2>Checkout</h2>
 
-            
+
 
             {/* Shipping Address Section */}
             <div className="section">
@@ -92,13 +92,14 @@ const Checkout = () => {
                                     <img
                                         src={item.image}
                                         alt={item.title}
-                                        style={{ width: '100px', height: '100px', objectFit: 'cover' }}
+                                        style={{ width: '100px', height: '150px', objectFit: 'cover' }}
                                     />
                                 </div>
-                                <div className="product-details">
-                                    <h4>{item.title}</h4>
-                                    <p>Price: ${item.price.toFixed(2)}</p>
-                                    <p>Quantity: {item.quantity}</p>
+                                <div className="product-details" >
+                                    <h4 style={{ marginBottom: '10px' }}>{item.title}</h4>
+                                    <h4>{item.tags}</h4>
+                                    <p>{item.shortDescription}</p>
+                                    <p>${item.price.toFixed(2)} x  {item.quantity}</p>
                                 </div>
                             </div>
                         ))}
@@ -115,18 +116,18 @@ const Checkout = () => {
                 calculateTotal={calculateTotal}
             />
 
-  {/* Back Button */}
-  <div className="back-btn">
-      <Link to="/bag-details">
-          <button className="btn4">Back</button>
-      </Link>
-  </div>
-      
-            
+            {/* Back Button */}
+            <div className="back-btn">
+                <Link to="/bag-details">
+                    <button className="btn4">Back</button>
+                </Link>
+            </div>
+
+
         </div>
-         
+
     );
-   
+
 };
 
 export default Checkout;
