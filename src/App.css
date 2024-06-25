@@ -252,3 +252,18 @@
 .back-btn .btn4:hover {
   background-color: darkgray;
 }
+
+@media (max-width: 768px) {
+  .main-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .container, .order-summary {
+      width: 100%;
+  }
+
+  .order-summary {
+      margin-top: 20px;
+  }
+}
