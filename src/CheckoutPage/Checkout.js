@@ -8,7 +8,6 @@ import OrderSummary from './OrderSummary';
 
 
 
-
 const Checkout = () => {
     const location = useLocation();
     const { cartItems } = location.state || { cartItems: [] };
@@ -42,88 +41,88 @@ const Checkout = () => {
     };
 
     return (
-        <div className="container">
-            <h2>Checkout</h2>
+        <div className="main-container">
+            <div className="container">
+                <h2>Checkout</h2>
 
-
-
-            {/* Shipping Address Section */}
-            <div className="section">
-                <h3>Shipping Address</h3>
-                <div className="section-content">
-                    <ShippingAddress
-                        shippingDetails={shippingDetails}
-                        setShippingDetails={setShippingDetails}
-                        readOnly={false} // Always editable in this context
-                    />
-                </div>
-                <div className="section-actions">
-                    <Link to="/address">
-                        <button className="change-button">Change</button>
-                    </Link>
-                </div>
-            </div>
-
-            {/* Payment Method Section */}
-            <div className="section payment-section">
-                <h3>Payment Method</h3>
-                <div className="section-content">
-                    <PaymentMethod
-                        paymentDetails={paymentDetails}
-                        setPaymentDetails={setPaymentDetails}
-                        readOnly={false} // Always editable in this context
-                    />
-                </div>
-                <div className="section-actions">
-                    <Link to="/payment">
-                        <button className="change-button">Change</button>
-                    </Link>
-                </div>
-            </div>
-
-            {/* Review Your Bag Section */}
-            <div className="section" id="review-your-bag">
-                <h3>Review Your Bag</h3>
-                <div className="section-content">
-                    <div id="bagSummary">
-                        {cartItems.map(item => (
-                            <div key={item.id} className="bag-item">
-                                <div className="product-image-container">
-                                    <img
-                                        src={item.image}
-                                        alt={item.title}
-                                        style={{ width: '100px', height: '150px', objectFit: 'cover' }}
-                                    />
-                                </div>
-                                <div className="product-details" >
-                                    <h4 style={{ marginBottom: '10px' }}>{item.title}</h4>
-                                    <h4>{item.tags}</h4>
-                                    <p>{item.shortDescription}</p>
-                                    <p>${item.price.toFixed(2)} x  {item.quantity}</p>
-                                </div>
-                            </div>
-                        ))}
+                {/* Shipping Address Section */}
+                <div className="section">
+                    <h3>Shipping Address</h3>
+                    <div className="section-content">
+                        <ShippingAddress
+                            shippingDetails={shippingDetails}
+                            setShippingDetails={setShippingDetails}
+                            readOnly={false}
+                        />
                     </div>
+                    <div className="section-actions">
+                        <Link to="/address">
+                            <button className="change-button">Change</button>
+                        </Link>
+                    </div>
+                </div>
+
+                {/* Payment Method Section */}
+                <div className="section payment-section">
+                    <h3>Payment Method</h3>
+                    <div className="section-content">
+                        <PaymentMethod
+                            paymentDetails={paymentDetails}
+                            setPaymentDetails={setPaymentDetails}
+                            readOnly={false}
+                        />
+                    </div>
+                    <div className="section-actions">
+                        <Link to="/payment">
+                            <button className="change-button">Change</button>
+                        </Link>
+                    </div>
+                </div>
+
+                {/* Review Your Bag Section */}
+                <div className="section" id="review-your-bag">
+                    <h3>Review Your Bag</h3>
+                    <div className="section-content">
+                        <div id="bagSummary">
+                            {cartItems.map(item => (
+                                <div key={item.id} className="bag-item">
+                                    <div className="product-image-container">
+                                        <img
+                                            src={item.image}
+                                            alt={item.title}
+                                            style={{ width: '100px', height: '100px', objectFit: 'cover' }}
+                                        />
+                                    </div>
+                                    <div className="product-details" >
+                                        <h4 style={{ marginBottom: '10px' }}>{item.title}</h4>
+                                        <h4>{item.tags}</h4>
+                                        <p>{item.shortDescription}</p>
+                                        <p>${item.price.toFixed(2)} x  {item.quantity}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Back Button */}
+                <div className="back-btn">
+                    <Link to="/bag-details">
+                        <button className="btn4">Back</button>
+                    </Link>
                 </div>
             </div>
 
             {/* Order Summary */}
-            <OrderSummary
-                itemsTotal={cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0)}
-                shippingCost={10.00}
-                estimatedGST={(cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0) + 10.00) * 0.05}
-                giftCardBalance={parseFloat(paymentDetails.giftCardBalance.replace('$', '')) || 0}
-                calculateTotal={calculateTotal}
-            />
-
-            {/* Back Button */}
-            <div className="back-btn">
-                <Link to="/bag-details">
-                    <button className="btn4">Back</button>
-                </Link>
+            <div className="order-summary">
+                <OrderSummary
+                    itemsTotal={cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0)}
+                    shippingCost={10.00}
+                    estimatedGST={(cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0) + 10.00) * 0.05}
+                    giftCardBalance={parseFloat(paymentDetails.giftCardBalance.replace('$', '')) || 0}
+                    calculateTotal={calculateTotal}
+                />
             </div>
-
-
         </div>
 
     );

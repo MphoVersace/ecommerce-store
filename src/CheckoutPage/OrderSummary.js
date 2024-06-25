@@ -8,7 +8,7 @@ const OrderSummary = ({ itemsTotal, shippingCost, estimatedGST, giftCardBalance,
             <p>Shipping: ${shippingCost.toFixed(2)}</p>
             <p>Estimated GST: ${estimatedGST.toFixed(2)}</p>
             <p>Gift Card: -${giftCardBalance.toFixed(2)}</p>
-            <h4>Total: ${calculateTotal()}</h4>
+            <h4>Order Total : ${calculateTotal()}</h4>
             <button type="button" onClick={() => alert('Order Placed!')}>Place Your Order</button>
             
         </div>
