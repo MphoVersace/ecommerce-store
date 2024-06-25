@@ -17,7 +17,7 @@ function App() {
         <Route path="/logo" element={<Logo />} />
         <Route path="/menu-icon" element={<MenuIcon />} />
         <Route path="/nav-link" element={<NavLink />} />
-        <Route path="/dashboard" element={<ProductDetail />} />
+        <Route path="</product/:productId" element={<ProductDetail />} />
         <Route path="/bag" element={<BagDetails />} />
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
