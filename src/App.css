@@ -96,20 +96,24 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 80%;
-  margin: auto;
+  width: 100%; 
+  max-width: 1200px; 
+  margin:auto;
   margin-top: 10%;
   font-family: sans-serif;
-  max-width: 1600px;
+  flex-wrap: wrap; 
+  border: radius 19px;
+  
   
 }
 
 .container {
+ 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start; 
-  
+  width: 60%;
 }
 
 .section {
@@ -141,13 +145,19 @@
 }
 
 .change-button {
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 10px 20px;
+  border-radius: 0.9rem;
   cursor: pointer;
+  width: 8rem;
+  height: 2.5rem;
+  background-color: rgb(247, 243, 243);
+  outline-style: solid;
+  outline-color: rgb(35, 34, 34);
+  top: 66px;
+ 
 }
+
+
+
 
 .change-button:hover {
   background-color: darkgray;
@@ -186,8 +196,7 @@
 /* Order Summary */
 .order-summary {
   border: 1px solid rgba(0, 0, 0, 0);
- 
-  height: auto;
+   height: auto;
   border-radius: 0.5rem;
   background-color: white;
   padding: 20px;
@@ -201,6 +210,7 @@
   font-size: 2rem;
   margin-left:0, 1rem;
   margin-top: 1rem;
+  
  
 }
 
@@ -214,6 +224,7 @@
 .order-summary p {
   margin: 10px 0;
   color: gray;
+ 
 }
 
 .order-summary .summary-item {
@@ -224,6 +235,7 @@
 
 .order-summary .summary-item p {
   margin: 5px 0;
+  flex: 1;
 }
 
 .order-summary .total {
@@ -237,6 +249,13 @@
   display: flex;
   justify-content: flex-end;
   width: 150%;
+
+  position: fixed; 
+  top: 300px; 
+  right: 250px;
+  z-index: 1000; 
+  
+
 }
 
 .back-btn .btn4 {
@@ -245,14 +264,20 @@
   border-radius: 0.5rem;
   background-color: rgb(247, 243, 243);
   
-  border:rgb(6, 6, 6);
+  outline-style: solid;
+  outline-color: rgb(19, 18, 18);
   cursor: pointer;
+
+  text-align: center; 
+
 }
 
 .back-btn .btn4:hover {
   background-color: darkgray;
 }
-
+.back-icon{
+  text-align: center;
+}
 @media (max-width: 768px) {
   .main-container {
       flex-direction: column;
@@ -267,3 +292,15 @@
       margin-top: 20px;
   }
 }
+
+.place-order-btn{
+  width: 14rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: rgb(3, 3, 3);
+  color:white;
+  cursor: pointer;
+}
+
+
+
