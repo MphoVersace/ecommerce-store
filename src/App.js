@@ -7,6 +7,8 @@ import { Home } from './container';
 import BagDetails from './Bag/BagDetails';
 import Checkout from './CheckoutPage/Checkout';
 import './App.css';
+import Address from './components/address';
+
 
 function App() {
 
