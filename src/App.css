@@ -91,17 +91,22 @@
 
 
 
-
-
-
+/* Main container to hold both the checkout sections and the order summary */
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  margin: auto;
+  margin-top: 10%;
+  font-family: sans-serif;
+}
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  margin-top: 5%;
-  font-family: sans-serif;
+  align-items: flex-start; 
 }
 
 .section {
@@ -112,7 +117,7 @@
   flex-direction: column;
   align-items: flex-start;
   border-radius: 0.7em;
-  width: 60%;
+  width: 100%; 
   margin-bottom: 25px;
 }
 
@@ -122,9 +127,7 @@
   margin-bottom: 10px;
 }
 
-.section-content {
-  width: 100%;
-}
+
 
 .section-actions {
   display: flex;
@@ -178,30 +181,30 @@
 
 /* Order Summary */
 .order-summary {
-  border: 2px solid rgba(0, 0, 0, 0);
-  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0);
+ 
+  height: auto;
+  border-radius: 0.5rem;
   background-color: white;
-  flex-direction: column;
-  align-items: flex-start;
-  border-radius: 12px;
-  width: 300px;
-  margin-top: 25px;
-  position: absolute;
-  border-style: ridge;
-  top: 15px;
+  padding: 20px;
+  margin-left: 20px;
+  position: sticky;
+  top: 0;
+  margin-top: 3%; 
 }
-
-
-
-
-
-
-
 
 .order-summary h3 {
   font-size: 2rem;
+  margin-left:0, 1rem;
+  margin-top: 1rem;
+ 
+}
+
+.order-summary h4 {
+  font-size: 1rem;
   letter-spacing: 0.2rem;
   margin-bottom: 10px;
+  color: red; 
 }
 
 .order-summary p {
@@ -226,23 +229,22 @@
 }
 
 .back-btn {
-  margin-top: 30px;
+  margin-top: 150px;
   display: flex;
   justify-content: flex-end;
-  width: 100%;
+  width: 150%;
 }
 
 .back-btn .btn4 {
   width: 8rem;
   height: 2.5rem;
   border-radius: 0.5rem;
-  background-color: black;
-  color: white;
-  border: none;
+  background-color: rgb(247, 243, 243);
+  
+  border:rgb(6, 6, 6);
   cursor: pointer;
 }
 
 .back-btn .btn4:hover {
   background-color: darkgray;
 }
-
