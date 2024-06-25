@@ -86,18 +86,22 @@ const Checkout = () => {
                         <div id="bagSummary">
                             {cartItems.map(item => (
                                 <div key={item.id} className="bag-item">
-                                    <div className="product-image-container">
-                                        <img
-                                            src={item.image}
-                                            alt={item.title}
-                                            style={{ width: '100px', height: '100px', objectFit: 'cover' }}
-                                        />
-                                    </div>
-                                    <div className="product-details" >
-                                        <h4 style={{ marginBottom: '10px' }}>{item.title}</h4>
-                                        <h4>{item.tags}</h4>
-                                        <p>{item.shortDescription}</p>
-                                        <p>${item.price.toFixed(2)} x  {item.quantity}</p>
+                                    <div>
+                                        <div className="product-image-container">
+                                            <img
+                                                src={item.image}
+                                                alt={item.title}
+                                                style={{ width: '100px', height: '150px', objectFit: 'cover' }}
+                                            />
+                                        </div>
+                                        <div className="product-details" >
+                                            <h4 style={{ marginBottom: '10px' }}>{item.title}</h4>
+                                            <h4>{item.tags}</h4>
+                                            <p>{item.shortDescription}</p>
+                                            <p>${item.price.toFixed(2)} x  {item.quantity}</p>
+
+                                        </div>
+                                        <hr />
                                     </div>
                                 </div>
                             ))}
