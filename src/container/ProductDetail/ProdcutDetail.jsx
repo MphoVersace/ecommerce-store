@@ -2,8 +2,9 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { data } from '../../constants';
 
-const ProductDetail = () => {
+export default function ProductDetail() {
   const { productId } = useParams();
+  console.log(productId)
   const navigate = useNavigate();
   const product = data.products[productId];
 
@@ -24,4 +25,4 @@ const ProductDetail = () => {
   );
 };
 
-export default ProductDetail;
+// export default ProductDetail;

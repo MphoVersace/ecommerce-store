@@ -2,12 +2,13 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import Sidebar from './components/MenuSidebar';
-import { ProductDetail } from './container';
+import { ProductDetail } from './container/ProductDetail';
 import { Home } from './container';
 import BagDetails from './Bag/BagDetails';
 import Checkout from './CheckoutPage/Checkout';
 import './App.css';
 import Address from './components/address';
+import PaymentForm from './components/payment';
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
         <Route path="</product/:productId" element={<ProductDetail />} />
         <Route path="/bag" element={<BagDetails />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/Address" element={<Address />} />
+        <Route path="/payment" element={< PaymentForm />} />
       </Routes>
     </BrowserRouter>
   );
