@@ -3,7 +3,7 @@ import { data } from "../../constants";
 import { ProductItem } from "../../components";
 import Sidebar from "../../components/MenuSidebar";
 import SideBag from '../../Bag/SideBag';
-import Bag from '../../Bag/Bag';
+// import Bag from '../../Bag/Bag';
 import './Home.css'
 
 const Home = () => {
