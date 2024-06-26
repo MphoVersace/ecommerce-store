@@ -6,6 +6,7 @@ import ShippingAddress from './Shipping';
 import PaymentMethod from './Cardpayment';
 import OrderSummary from './OrderSummary';
 import backImage from '../assets/Name=chevron-back.png';
+import StarIcon from "../assets/StarIcon";
 
 
 const Checkout = () => {
@@ -87,19 +88,23 @@ const Checkout = () => {
                             {cartItems.map(item => (
                                 <div key={item.id} className="bag-item">
                                     <div>
-                                        <div className="product-image-container">
-                                            <img
-                                                src={item.image}
-                                                alt={item.title}
-                                                style={{ width: '100px', height: '150px', objectFit: 'cover' }}
-                                            />
-                                        </div>
-                                        <div className="product-details" >
-                                            <h4 style={{ marginBottom: '10px' }}>{item.title}</h4>
-                                            <h4>{item.tags}</h4>
-                                            <p>{item.shortDescription}</p>
-                                            <p>${item.price.toFixed(2)} x  {item.quantity}</p>
-
+                                        <div style={{ display: 'flex', padding: '5rem' }}>
+                                            <div className="product-image-container">
+                                                <img
+                                                    src={item.image}
+                                                    alt={item.title}
+                                                    style={{ width: '100px', height: '150px', objectFit: 'cover' }}
+                                                />
+                                            </div>
+                                            <div className="product-details" >
+                                                <h4 style={{ marginBottom: '10px' }}>{item.title}</h4>
+                                                <h4>{item.tags}</h4>
+                                                <p>{item.shortDescription}</p>
+                                                <div>
+                                                    <StarIcon />
+                                                </div>
+                                                <p>${item.price.toFixed(2)} x  {item.quantity}</p>
+                                            </div>
                                         </div>
                                         <hr />
                                     </div>
@@ -111,12 +116,12 @@ const Checkout = () => {
 
                 {/* Back Button */}
                 <div className="back-btn">
-                    <Link to="/bag-details">
-                    <button className="btn4">
-                        <img src={backImage} alt="Back" className="back-icon" />
-                        Back
-                    </button>
-                        
+                    <Link to="/bag">
+                        <button className="btn4">
+                            <img src={backImage} alt="Back" className="back-icon" />
+                            Back
+                        </button>
+
                     </Link>
                 </div>
             </div>
