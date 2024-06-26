@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import Sidebar from './components/MenuSidebar';
-// import { ProductDetail } from './container/ProductDetail';
+import { ProductDetail } from './container';
 import { Home } from './container';
 import BagDetails from './Bag/BagDetails';
 import Checkout from './CheckoutPage/Checkout';
@@ -20,7 +20,7 @@ function App() {
         <Route path="/logo" element={<Logo />} />
         <Route path="/menu-icon" element={<MenuIcon />} />
         <Route path="/nav-link" element={<NavLink />} />
-        {/* <Route path="</product/:productId" element={<ProductDetail />} /> */}
+        <Route path="/product/:productId" element={<ProductDetail />} />
         <Route path="/bag" element={<BagDetails />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/Address" element={<Address />} />

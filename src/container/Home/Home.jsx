@@ -36,7 +36,7 @@ const Home = () => {
       </div>
       <div style={{ display: 'flex' }}>
     <div className="product-container" style={{flex: 1}}>
-          {filteredProducts.map((product, index) => (
+          {data.products.map((product, index) => (
             <ProductItem
               key={product.title + index}
               productId={index}

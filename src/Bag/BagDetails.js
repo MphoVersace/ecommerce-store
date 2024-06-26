@@ -27,7 +27,7 @@ export default function BagDetails() {
         // <Sidebar /> >
         <div style={{ display: 'flex', justifyContent: 'space-between' }} >
             <Sidebar />
-            <div className='bag-items-container' style={{ marginLeft: '5rem', width: '100%' }}>
+            <div className='bag-items-container' style={{ marginLeft: '5rem', width: '100%', fontFamily: 'Cambria Cochin Georgia Times  serif' }}>
                 <div>
                     <h1>Check Your Bag Items</h1>
                     <div style={{ width: '100%' }}>
@@ -65,7 +65,7 @@ export default function BagDetails() {
             <div style={{ width: '20rem' }}>
                 <Bag />
             </div>
-        </div>
+        </div >
     )
 }
 
