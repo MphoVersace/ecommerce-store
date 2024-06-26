@@ -4,12 +4,24 @@ const OrderSummary = ({ itemsTotal, shippingCost, estimatedGST, giftCardBalance,
     return (
         <div className="order-summary">
             <h3>Order Summary</h3>
-            <p>Items: ${itemsTotal.toFixed(2)}</p>
-            <p>Shipping: ${shippingCost.toFixed(2)}</p>
-            <p>Estimated GST: ${estimatedGST.toFixed(2)}</p>
-            <p>Gift Card: -${giftCardBalance.toFixed(2)}</p>
+            <div className="summary-item">
+                <div className="text-item">Items:</div>
+                <div className="number-item">${itemsTotal.toFixed(2)}</div>
+            </div>
+            <div className="summary-item">
+                <div className="text-item">Shipping:</div>
+                <div className="number-item">${shippingCost.toFixed(2)}</div>
+            </div>
+            <div className="summary-item">
+                <div className="text-item">Estimated GST:</div>
+                <div className="number-item">${estimatedGST.toFixed(2)}</div>
+            </div>
+            <div className="summary-item">
+                <div className="text-item">Gift Card:</div>
+                <div className="number-item">-${giftCardBalance.toFixed(2)}</div>
+            </div>
             <h4>Order Total : ${calculateTotal()}</h4>
-            <button type="button" onClick={() => alert('Order Placed!')}>Place Your Order</button>
+            <button type="button"  className="place-order-btn" onClick={() => alert('Order Placed!')}>Place Your Order</button>
             
         </div>
         

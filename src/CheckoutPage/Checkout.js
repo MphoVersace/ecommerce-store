@@ -5,7 +5,7 @@ import ImageGift from '../assets/Name=gift.png';
 import ShippingAddress from './Shipping';
 import PaymentMethod from './Cardpayment';
 import OrderSummary from './OrderSummary';
-
+import backImage from '../assets/Name=chevron-back.png';
 
 
 const Checkout = () => {
@@ -112,7 +112,11 @@ const Checkout = () => {
                 {/* Back Button */}
                 <div className="back-btn">
                     <Link to="/bag-details">
-                        <button className="btn4">Back</button>
+                    <button className="btn4">
+                        <img src={backImage} alt="Back" className="back-icon" />
+                        Back
+                    </button>
+                        
                     </Link>
                 </div>
             </div>
