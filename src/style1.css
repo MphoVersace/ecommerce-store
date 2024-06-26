@@ -1,32 +1,30 @@
 .containers {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center */
-  align-items: center; /* Horizontally center */
+  justify-content: center; 
+  align-items: center;
   height: 100%;
   margin-top: 5%;
   font-family: sans-serif;
   background-color: #f0f0f0;
-
-  
 }
 
 .top-container {
-  border: 2px solid rgba(0, 0, 0, 0); /* Add border */
-  padding: 20px; /* Add padding for better spacing */
+  border: 2px solid rgba(0, 0, 0, 0);
+  padding: 20px; 
   background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the left */
+  align-items: flex-start; 
   border-radius: 0.7em;
   width: 60%;
 }
 
 .top-container p {
-  margin: 10px 0; /* Add some margin between paragraphs */
+  margin: 10px 0; 
   color: gray;
-  display: flex; /* Enable flex display for aligning items */
-  align-items: center; /* Align items vertically */
+  display: flex; 
+  align-items: center; 
 }
 
 .top-container h1 {
@@ -42,13 +40,12 @@
 }
 
 .bottom-container {
-  /* Styles for the bottom container */
-  border: 2px solid rgba(0, 0, 0, 0); /* Add border */
-  padding: 20px; /* Add padding for better spacing */
+  border: 2px solid rgba(0, 0, 0, 0); 
+  padding: 20px; 
   background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the left */
+  align-items: flex-start; 
   border-radius: 0.7em;
   width: 60%;
   margin-top: 30px;
@@ -85,11 +82,6 @@
   height: 3rem;
 }
 
-/* label {
-  display: block;
-} */
-
-
 .card input {
   border: 1px solid #d9d9d9;
   border-radius: 0.5em;
@@ -117,16 +109,9 @@ label {
 
 }
 #la {
-  color: #02D693; /* Example color change */
-  
-
+  color: #02D693; 
 }
 
-
-/* #ba {
-  position: relative; 
-  left: 20px; 
-} */
 .btn{
   height: 5rem;
   margin-top: 3rem;
