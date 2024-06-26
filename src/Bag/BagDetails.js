@@ -6,6 +6,7 @@ import { data } from "../constants";
 import { addToBag } from "./Bag";
 import { decreaseQuantity } from "./Bag";
 import Sidebar from "../components/MenuSidebar";
+import StarIcon from "../assets/StarIcon";
 
 let setMyBag = () => { };
 const quantityUpdate = (productId) => {
@@ -39,13 +40,11 @@ export default function BagDetails() {
                                     <div className="product-details">
                                         <h1>{product.title}</h1>
                                         {product.tags && <h4 style={{ color: 'grey' }}> {product.tags}</h4>}
+                                        <p></p>
                                         {product.shortDescription && <p>{product.shortDescription}</p>}
-                                        {product.rating && (
-                                            <div className="product-rating">
-                                                {/* Add your rating component or display logic here */}
-                                                <span>Rating: {product.rating.average} stars</span>
-                                            </div>
-                                        )}
+                                        <div>
+                                            <StarIcon />
+                                        </div>
                                         <div className="quantity-price" style={{ display: 'flex', justifyContent: 'space-between' }}>
                                             {/* <p>Quantity: {product.quantity}</p> */}
                                             <p>Price: ${product.price.toFixed(2)}</p>
