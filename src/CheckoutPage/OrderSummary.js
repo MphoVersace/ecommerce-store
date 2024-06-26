@@ -21,12 +21,9 @@ const OrderSummary = ({ itemsTotal, shippingCost, estimatedGST, giftCardBalance,
                 <div className="number-item">-${giftCardBalance.toFixed(2)}</div>
             </div>
             <h4>Order Total : ${calculateTotal()}</h4>
-            <button type="button"  className="place-order-btn" onClick={() => alert('Order Placed!')}>Place Your Order</button>
-            
-        </div>
-        
-    );
-   
-};
+            <button type="button" className="place-order-btn" onClick={() => alert('Order Placed!')}>Place Your Order</button>
 
+        </div>
+    );
+};
 export default OrderSummary;

@@ -3,7 +3,7 @@ import React from 'react';
 const ShippingAddress = ({ shippingDetails, isEditing, handleInputChange, saveDetails, toggleEdit }) => {
     return (
         <div className="section" id="shipping-address">
-            
+
             {!isEditing ? (
                 <div>
                     <p>{shippingDetails.fullName}</p>
@@ -11,7 +11,6 @@ const ShippingAddress = ({ shippingDetails, isEditing, handleInputChange, saveDe
                     <p>{shippingDetails.addressLine2}</p>
                     <p>{shippingDetails.city}, {shippingDetails.state}, {shippingDetails.zipCode}</p>
                     <p>{shippingDetails.country}</p>
-                  
                 </div>
             ) : (
                 <form>
