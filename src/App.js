@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import Address from './components/address';
+import Address from './components/payment';
 
 function App() {
   return (

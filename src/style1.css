@@ -1,12 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f0f0f0; /* Light grey background */
+}
+
 .containers {
+ 
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
-  height: 100%;
+  min-height: 100vh; /* Ensure the container takes up at least the full viewport height */
   margin-top: 5%;
-  font-family: sans-serif;
-  background-color: #f0f0f0;
 }
 
 .top-container {
