@@ -92,6 +92,13 @@
 
 
 /* Main container to hold both the checkout sections and the order summary */
+
+body {
+  background-color: black;
+   margin: 0;
+  font-family: sans-serif; /* Ensure the same font-family is used globally */
+}
+
 .main-container {
   display: flex;
   justify-content: space-between;
@@ -99,7 +106,7 @@
   width: 100%; 
   max-width: 1200px; 
   margin:auto;
-  margin-top: 10%;
+  margin-top: 0.1%;
   font-family: sans-serif;
   flex-wrap: wrap; 
   border: radius 19px;
