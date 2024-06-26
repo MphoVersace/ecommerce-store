@@ -9,11 +9,11 @@ import './Home.css'
 const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredProducts = data.products.filter(
-    (product) =>
-      product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.price.toString().includes(searchQuery)
-  );
+  // const filteredProducts = data.products.filter(
+  //   (product) =>
+  //     product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  //     product.price.toString().includes(searchQuery)
+  // );
 
   return (
     <>

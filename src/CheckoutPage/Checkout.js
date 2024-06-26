@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import ImageCard from '../assets/Name=card.png';
-import ImageGift from '../assets/Name=gift.png';
+// import ImageCard from '../assets/Name=card.png';
+// import ImageGift from '../assets/Name=gift.png';
 import ShippingAddress from './Shipping';
 import PaymentMethod from './Cardpayment';
 import OrderSummary from './OrderSummary';
