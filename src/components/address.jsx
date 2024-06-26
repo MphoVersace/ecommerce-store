@@ -55,7 +55,7 @@ function AddAdress() {
             </div>
 
             <div className="btn5">
-              <Link to="/AddPayment">
+              <Link to="/Checkout">
                 <button className="bttn5">Add Address</button>
               </Link>
             </div>

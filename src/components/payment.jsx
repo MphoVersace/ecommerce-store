@@ -1,6 +1,7 @@
 import cardIcon from "../assets/card-icon.svg";
 import lockIcon from "../assets/cardlock.svg";
 import "../style1.css";
+import { Link } from "react-router-dom";
 
 function AddPayment() {
   return (
@@ -42,7 +43,9 @@ function AddPayment() {
               <label htmlFor="myCheckbox">Save this as your default payment method</label>
             </div>
             <div className="btn">
-              <button className="bttn">Add Payment Method</button>
+            <Link to="/Checkout">
+                <button className="bttn">Add Payment Method</button>
+              </Link>
             </div>
             <div className="last-line">
               <p id="ba">Back</p>
