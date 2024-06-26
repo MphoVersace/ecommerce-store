@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { data } from '../../constants';
+import StarIcon from '../../assets/StarIcon';
 
 export default function ProductDetail() {
   const { productId } = useParams();
@@ -17,6 +18,9 @@ export default function ProductDetail() {
       <div className="product-detail__info">
         <h2>{product.title}</h2>
         <p>{product.tags}</p>
+        <div>
+          <StarIcon />
+        </div>
         <p>{product.price}</p>
         <p>{product.shortDescription}</p>
         <p>{product.productDescription}</p>
