@@ -24,7 +24,7 @@ export default function ProductDetail() {
     
     <div className="product-detail" style={{marginRight:'0rem'}} >
       <Sidebar/>
-      <button onClick={() => navigate('/')} style={{display:'flex'}}>Back</button>
+      <button onClick={() => navigate('/')} style={{border:'none', fontSize: '1.5rem',background:'none', marginTop:'2rem'}}> &lt; Back</button>
       <div style={{display:'flex', justifyContent:'space-between'}}>
       <div >
           
