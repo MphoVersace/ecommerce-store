@@ -22,7 +22,7 @@ export default function ProductDetail() {
           
             <div style={{display:'flex'}}>
                   <div className="product-detail__image-container">
-                    <img style={{width:'250px', height:'290px'}} src={product.image} alt={product.title} className="product-detail__image" />
+                    <img style={{width:'150px', height:'250px'}} src={product.image} alt={product.title} className="product-detail__image" />
                   </div>
                   <div className="product-detail__info">
                     <h2>{product.title}</h2>
@@ -33,6 +33,7 @@ export default function ProductDetail() {
                     <p>{product.price}</p>
                     <p>{product.shortDescription}</p>
                   </div>
+                  
                 
             <div/>    
                 
