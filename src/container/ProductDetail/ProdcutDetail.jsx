@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import Sidebar from "../components/MenuSidebar";
 import { Link } from 'react-router-dom';
 import './ProductDetail.css';
-import './sidebag.';
-import './sidebag.css';
-import cart from '../assets/addcart.svg';
-import stars from '../assets/Special.png';
+// import './sidebag.css';
+// import cart from '../assets/addcart.svg';
+// import stars from '../assets/Special.png';
 import { useLocation } from 'react-router-dom';
+import Sidebar from '../../components/MenuSidebar';
+import SideBag, { addToSideBag } from '../../Bag/SideBag';
+import StarIcon from '../../assets/StarIcon';
 
 function ItemView() {
   const location = useLocation();
@@ -18,7 +19,9 @@ function ItemView() {
   };
 
   return (
-    <> <div><Sidebar /></div>
+    <> 
+    <div>
+      <Sidebar />
       <Link to="/" className="back-link">
         &lt;&nbsp;&nbsp;Back
       </Link>
@@ -41,7 +44,7 @@ function ItemView() {
           <div className="product-details">
             <h1>{item.title}</h1>
             <h3>{item.description}</h3>
-            <img className="stars" src={stars} alt="" />
+            <StarIcon />
             <p>
               {item.currency}
               {item.price}
@@ -50,8 +53,8 @@ function ItemView() {
           </div>
         </div>
       </div>
-      <div className="button2" onClick={handleClick}>
-        <img src={cart} alt="Logo" />
+      <div className="button2" onClick={addToSideBag}>
+        {/* <img src={cart} alt="Logo" /> */}
         <span>Add Bag</span>
       </div>
       <br />
@@ -62,7 +65,9 @@ function ItemView() {
         <p>{item.detailedDescription[1]}</p>
         {/* second part of detailed */}
       </div>
-      <Menusidebar selectedItem={clickedItem} />
+      <SideBag/>
+      {/* <Menusidebar selectedItem={clickedItem} /> */}
+      </div>
     </>
   );
 }
