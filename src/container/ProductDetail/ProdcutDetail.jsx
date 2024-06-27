@@ -15,35 +15,42 @@ export default function ProductDetail() {
   return (
     <>
     <button onClick={() => navigate('/')} style={{display:'flex'}}>Back</button>
-    <div className="product-detail">
+    <div className="product-detail" style={{marginRight:'0rem'}} >
       <Sidebar/>
+      <div style={{display:'flex', justifyContent:'space-between'}}>
       <div >
-      <div >
-          <div>
-            <div style={{display:'flex'}}>
-              <div className="product-detail__image-container">
-                <img style={{width:'150px', height:'150px'}} src={product.image} alt={product.title} className="product-detail__image" />
-              </div>
-              <div className="product-detail__info">
-                <h2>{product.title}</h2>
-                <p>{product.tags}</p>
-                <div>
-                  <StarIcon />
-                </div>
-                <p>{product.price}</p>
-                <p>{product.shortDescription}</p>
-              </div>
-            </div>
-              <p>{product.productDescription}</p>
-            </div>
           
-      
+            <div style={{display:'flex'}}>
+                  <div className="product-detail__image-container">
+                    <img style={{width:'250px', height:'290px'}} src={product.image} alt={product.title} className="product-detail__image" />
+                  </div>
+                  <div className="product-detail__info">
+                    <h2>{product.title}</h2>
+                    <p>{product.tags}</p>
+                    <div>
+                      <StarIcon />
+                    </div>
+                    <p>{product.price}</p>
+                    <p>{product.shortDescription}</p>
+                  </div>
+                
+            <div/>    
+                
+          </div>
+          <hr style={{height:'2px', backgroundColor:'grey', marginBottom:"3rem", margin:'3rem'}}/>
+                  <div>
+                  <p>{product.productDescription}</p>
+                  </div>
+      </div>
+      <hr style={{width:'1rem', backgroundColor:'grey', marginLeft:'1rem', marginRight:'1rem'}}/>
+      <div style={{width:'150rem', margin:'0', marginRight:'0'}}>
+        <SideBag/>
       </div>
       <div>
-      <SideBag />
+      
       </div>
       </div>
-      </div>
+    </div>  
       </>
   
   );
