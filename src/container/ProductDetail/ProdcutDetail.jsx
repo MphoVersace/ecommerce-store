@@ -9,6 +9,7 @@ import { addToSideBag } from '../../Bag/SideBag';
 import { addToBag } from '../../Bag/Bag';
 
 
+
 const addToCart = (productId) => {
   addToSideBag(productId);
   addToBag(productId);
