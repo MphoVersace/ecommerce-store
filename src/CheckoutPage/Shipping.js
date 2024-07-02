@@ -86,7 +86,7 @@ const ShippingAddress = ({ shippingDetails, isEditing, handleInputChange, saveDe
                             <option value="usa">United States</option>
                             <option value="canada">Canada</option>
                             <option value="uk">United Kingdom</option>
-                            {/* Add more countries as needed */}
+                           
                         </select>
                     </div>
                     <button type="button" onClick={saveDetails}>Save</button>

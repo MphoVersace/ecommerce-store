@@ -31,7 +31,7 @@ const Checkout = () => {
 
     const calculateTotal = () => {
         const itemsTotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
-        const shippingCost = 10.00; // Example shipping cost
+        const shippingCost = 10.00;
         const estimatedGST = (itemsTotal + shippingCost) * 0.05; // Example GST calculation at 5%
         const giftCardBalance = parseFloat(paymentDetails.giftCardBalance.replace('$', '')) || 0;
         const total = itemsTotal + shippingCost + estimatedGST - giftCardBalance;
