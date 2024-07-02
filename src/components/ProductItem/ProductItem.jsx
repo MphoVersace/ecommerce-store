@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ProductItem.css';
 import { addToSideBag } from '../../Bag/SideBag';
 import { addToBag } from '../../Bag/Bag';
@@ -11,7 +12,9 @@ const addToCart = (productId) => {
 const ProductItem = ({ productId, title, price, tags, image }) => (
   <div className="product-item">
     <div className="product-item__image-container">
-      <img src={image} alt={title} className="product-item__image" />
+      <Link to={`/product/${productId}`}>
+        <img src={image} alt={title} className="product-item__image" />
+      </Link>
     </div>
     <div className="product-item__details">
       <h3 className="product-item__title">{title}</h3>

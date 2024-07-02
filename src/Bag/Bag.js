@@ -1,6 +1,6 @@
 import React from "react";
 import { data } from "../constants";
-import {Link,useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./sidebag.css"
 
 
@@ -28,7 +28,6 @@ export default function Bag() {
                     {cartItems.map((product) => (
                         <li key={product.id} className="cart-item">
                             <img src={product.image} style={{ maxWidth: '60px' }} alt={product.title} />
-                            <span>{product.title}</span>
                         </li>
                     ))}
                 </ul>
@@ -44,6 +43,8 @@ export default function Bag() {
     );
 };
 
+
+
 export function addToBag(productId) {
     const product = data.products[productId];
     const index = myBag.findIndex((item) => item.id === productId);
@@ -55,4 +56,16 @@ export function addToBag(productId) {
         myBag.push(newProduct);
     }
     setMyBag([...myBag]);
+}
+
+export function decreaseQuantity(productId) {
+    setMyBag((prevBag) => {
+        const updatedBag = prevBag.map((item) => {
+            if (item.id === productId && item.quantity > 0) {
+                return { ...item, quantity: item.quantity - 1 };
+            }
+            return item;
+        });
+        return updatedBag.filter((item) => item.quantity > 0);
+    });
 }

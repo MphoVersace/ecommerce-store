@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
+// import ImageCard from '../assets/Name=card.png';
+// import ImageGift from '../assets/Name=gift.png';
 import ShippingAddress from './Shipping';
 import PaymentMethod from './Cardpayment';
 import OrderSummary from './OrderSummary';
 import backImage from '../assets/Name=chevron-back.png';
+import StarIcon from "../assets/StarIcon";
 
 
 const Checkout = () => {
@@ -67,7 +70,7 @@ const Checkout = () => {
                         <PaymentMethod
                             paymentDetails={paymentDetails}
                             setPaymentDetails={setPaymentDetails}
-                            readOnly={false} 
+                            readOnly={false}
                         />
                     </div>
                     <div className="section-actions">
@@ -84,17 +87,26 @@ const Checkout = () => {
                         <div id="bagSummary">
                             {cartItems.map(item => (
                                 <div key={item.id} className="bag-item">
-                                    <div className="product-image-container">
-                                        <img
-                                            src={item.image}
-                                            alt={item.title}
-                                            style={{ width: '100px', height: '100px', objectFit: 'cover' }}
-                                        />
-                                    </div>
-                                    <div className="product-details">
-                                        <h4>{item.title}</h4>
-                                        <p>Price: ${item.price.toFixed(2)}</p>
-                                        <p>Quantity: {item.quantity}</p>
+                                    <div>
+                                        <div style={{ display: 'flex', padding: '5rem' }}>
+                                            <div className="product-image-container">
+                                                <img
+                                                    src={item.image}
+                                                    alt={item.title}
+                                                    style={{ width: '100px', height: '150px', objectFit: 'cover' }}
+                                                />
+                                            </div>
+                                            <div className="product-details" >
+                                                <h4 style={{ marginBottom: '10px' }}>{item.title}</h4>
+                                                <h4>{item.tags}</h4>
+                                                <p>{item.shortDescription}</p>
+                                                <div>
+                                                    <StarIcon />
+                                                </div>
+                                                <p>${item.price.toFixed(2)} x  {item.quantity}</p>
+                                            </div>
+                                        </div>
+                                        <hr />
                                     </div>
                                 </div>
                             ))}
@@ -104,12 +116,12 @@ const Checkout = () => {
 
                 {/* Back Button */}
                 <div className="back-btn">
-                    <Link to="/bag-details">
-                    <button className="btn4">
-                        <img src={backImage} alt="Back" className="back-icon" />
-                        Back
-                    </button>
-                        
+                    <Link to="/bag">
+                        <button className="btn4">
+                            <img src={backImage} alt="Back" className="back-icon" />
+                            Back
+                        </button>
+
                     </Link>
                 </div>
             </div>
@@ -125,7 +137,9 @@ const Checkout = () => {
                 />
             </div>
         </div>
+
     );
+
 };
 
 export default Checkout;

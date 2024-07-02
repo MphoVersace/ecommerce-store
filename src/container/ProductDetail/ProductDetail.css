@@ -1,0 +1,96 @@
+.back-link {
+    font-size: large;
+    display: block;
+    text-decoration: none;
+    color: #1a1f16;
+    font-weight: bold;
+    position: absolute;
+    left: 11rem;
+    top: 50px;
+  }
+  
+  .product-detail {
+    margin-left: 10rem;
+    margin-right: 25rem;
+    position: relative;
+    font-family: sans-serif;
+  }
+  
+  .product-detail__image-container {
+    display: flex;
+    margin-top: 10%;
+  }
+  
+  .product-detail__info {
+    margin-left: 50px;
+  }
+  
+  .product-detail__image {
+    margin-left: 1rem;
+    border-radius: 11px;
+    object-fit: cover;
+  }
+  
+  .smallImg {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .smallImage {
+    width: 3rem;
+    height: 58px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .product-detail__info h2 {
+    font-size: 3rem;
+    margin-top: -0.1px;
+  }
+  
+  .button2 {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 8px;
+    height: 30px;
+    width: 119px;
+    background: #1a1f16;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .button2 span {
+    color: white;
+    margin-left: 8px;
+    margin-top: -5px;
+  }
+  
+  .paragraph {
+    margin-left: 11rem;
+    margin-right: 25rem;
+    font-family: sans-serif;
+  }
+  
+  .paragraph h1 {
+    margin-top: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .paragraph p {
+    font-size: 28px;
+  }
+  
+  #HR {
+    width: 65%;
+    margin-left: 10%;
+    height: 3px;
+    background-color: #00000098;
+  }
+  
