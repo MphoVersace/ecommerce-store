@@ -94,7 +94,7 @@
 /* Main container to hold both the checkout sections and the order summary */
 
 body {
-  background-color: black;
+  background-color: rgb(237, 236, 236);
    margin: 0;
   font-family: sans-serif; /* Ensure the same font-family is used globally */
 }
